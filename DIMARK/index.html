@@ -347,7 +347,7 @@
           <div class="formbold-input-flex">
             <div>
               <label for="firstname" class="formbold-form-label">
-                Website(Optonal)
+                Website (Optional)
               </label>
               <input
                 type="text"
@@ -408,30 +408,19 @@
           </div>
 
           <div class="formbold-mb-3 formbold-input-wrapp">
-            <label class="formbold-form-label">
-              What Products do you sell?
-              <input
-                mbsc-input
-                id="my-input"
-                data-dropdown="true"
-                data-tags="true"
-              />
-            </label>
+            <label class="formbold-form-label"
+              >What Products do you sell?</label
+            >
             <select
-              id="multiple-select"
               class="formbold-form-input"
               name="products"
+              id="products"
               placeholder="Select products"
-              multiple
+              onchange="showSubSelection(this.value)"
             >
-              <option value="1">Books</option>
-              <option value="2">Movies, Music & Games</option>
-              <option value="3">Electronics & Computers</option>
-              <option value="4">Home, Garden & Tools</option>
-              <option value="5">Health & Beauty</option>
-              <option value="6">Toys, Kids & Baby</option>
-              <option value="7">Clothing & Jewelry</option>
-              <option value="8">Sports & Outdoors</option>
+              <option value="">Select products</option>
+              <option value="Furniture">Furniture</option>
+              <option value="Beauty">Beauty</option>
             </select>
 
             <div id="sub-selection-container"></div>
@@ -444,6 +433,17 @@
               <option value="">Select</option>
               <option value="">Yes</option>
               <option value="">No</option>
+            </select>
+          </div>
+
+          <div class="formbold-mb-3">
+            <label for="address" class="formbold-form-label">
+              Budget (in INR) per day
+            </label>
+            <select class="formbold-form-input" id="no-of-stores-select">
+              <option value="">Select</option>
+              <option value="">100-150/day</option>
+              <option value="">150-200/day</option>
             </select>
           </div>
 
@@ -667,11 +667,6 @@
         }
       }
 
-      mobiscroll.select("#multiple-select", {
-        inputElement: document.getElementById("my-input"),
-        touchUi: false,
-      });
-
       function changeOperationType() {
         var occupation = document.getElementById("occupation").value;
         var operationSelect = document.getElementById("operation-select");
@@ -687,7 +682,7 @@
           operationTypeDiv.style.display = "block";
           noOfStoresDiv.style.display = "none";
           operationSelect.innerHTML =
-            "<option value=''>Select</option><option value='App'>App</option><option value='Website'>Website</option><option value='Others'>Others</option>";
+            "<option value=''>Select</option><option value='App'>App</option><option value='Website'>Website</option><option value='Whatsapp'>Whatsapp</option>";
         } else if (occupation === "Local") {
           operationTypeDiv.style.display = "none";
           noOfStoresDiv.style.display = "block";
@@ -695,7 +690,7 @@
           operationTypeDiv.style.display = "block";
           noOfStoresDiv.style.display = "block";
           operationSelect.innerHTML =
-            "<option value=''>Select</option><option value='App'>App</option><option value='Website'>Website</option><option value='Others'>Others</option>";
+            "<option value=''>Select</option><option value='App'>App</option><option value='Website'>Website</option><option value='Whatsapp'>Whatsapp</option>";
 
           // Add options for Others
           if (operationSelect.value === "Others") {
