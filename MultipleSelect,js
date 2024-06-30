@@ -1,4 +1,9 @@
-/* MULTISELECT DROPDOWN */
+/*
+ * Created by David Adams
+ * https://codeshack.io/multi-select-dropdown-html-javascript/
+ *
+ * Released under the MIT license
+ */
 class MultiSelect {
   constructor(element, options = {}) {
     let defaults = {
@@ -49,69 +54,69 @@ class MultiSelect {
     let optionsHTML = "";
     for (let i = 0; i < this.data.length; i++) {
       optionsHTML += `
-              <div class="multi-select-option${
-                this.selectedValues.includes(this.data[i].value)
-                  ? " multi-select-selected"
-                  : ""
-              }" data-value="${this.data[i].value}">
-                  <span class="multi-select-option-radio"></span>
-                  <span class="multi-select-option-text">${
-                    this.data[i].html ? this.data[i].html : this.data[i].text
-                  }</span>
-              </div>
-          `;
+                <div class="multi-select-option${
+                  this.selectedValues.includes(this.data[i].value)
+                    ? " multi-select-selected"
+                    : ""
+                }" data-value="${this.data[i].value}">
+                    <span class="multi-select-option-radio"></span>
+                    <span class="multi-select-option-text">${
+                      this.data[i].html ? this.data[i].html : this.data[i].text
+                    }</span>
+                </div>
+            `;
     }
     let selectAllHTML = "";
     if (this.options.selectAll === true || this.options.selectAll === "true") {
       selectAllHTML = `<div class="multi-select-all">
-              <span class="multi-select-option-radio"></span>
-              <span class="multi-select-option-text">Select all</span>
-          </div>`;
+                <span class="multi-select-option-radio"></span>
+                <span class="multi-select-option-text">Select all</span>
+            </div>`;
     }
     let template = `
-          <div class="multi-select ${this.name}"${
+            <div class="multi-select ${this.name}"${
       this.selectElement.id ? ' id="' + this.selectElement.id + '"' : ""
     } style="${this.width ? "width:" + this.width + ";" : ""}${
       this.height ? "height:" + this.height + ";" : ""
     }">
-              ${this.selectedValues
-                .map(
-                  (value) =>
-                    `<input type="hidden" name="${this.name}[]" value="${value}">`
-                )
-                .join("")}
-              <div class="multi-select-header" style="${
-                this.width ? "width:" + this.width + ";" : ""
-              }${this.height ? "height:" + this.height + ";" : ""}">
-                  <span class="multi-select-header-max">${
-                    this.options.max
-                      ? this.selectedValues.length + "/" + this.options.max
-                      : ""
-                  }</span>
-                  <span class="multi-select-header-placeholder">${
-                    this.placeholder
-                  }</span>
-              </div>
-              <div class="multi-select-options" style="${
-                this.options.dropdownWidth
-                  ? "width:" + this.options.dropdownWidth + ";"
-                  : ""
-              }${
+                ${this.selectedValues
+                  .map(
+                    (value) =>
+                      `<input type="hidden" name="${this.name}[]" value="${value}">`
+                  )
+                  .join("")}
+                <div class="multi-select-header" style="${
+                  this.width ? "width:" + this.width + ";" : ""
+                }${this.height ? "height:" + this.height + ";" : ""}">
+                    <span class="multi-select-header-max">${
+                      this.options.max
+                        ? this.selectedValues.length + "/" + this.options.max
+                        : ""
+                    }</span>
+                    <span class="multi-select-header-placeholder">${
+                      this.placeholder
+                    }</span>
+                </div>
+                <div class="multi-select-options" style="${
+                  this.options.dropdownWidth
+                    ? "width:" + this.options.dropdownWidth + ";"
+                    : ""
+                }${
       this.options.dropdownHeight
         ? "height:" + this.options.dropdownHeight + ";"
         : ""
     }">
-                  ${
-                    this.options.search === true ||
-                    this.options.search === "true"
-                      ? '<input type="text" class="multi-select-search" placeholder="Search...">'
-                      : ""
-                  }
-                  ${selectAllHTML}
-                  ${optionsHTML}
-              </div>
-          </div>
-      `;
+                    ${
+                      this.options.search === true ||
+                      this.options.search === "true"
+                        ? '<input type="text" class="multi-select-search" placeholder="Search...">'
+                        : ""
+                    }
+                    ${selectAllHTML}
+                    ${optionsHTML}
+                </div>
+            </div>
+        `;
     let element = document.createElement("div");
     element.innerHTML = template;
     return element;
@@ -385,96 +390,3 @@ class MultiSelect {
 document
   .querySelectorAll("[data-multi-select]")
   .forEach((select) => new MultiSelect(select));
-
-/*FORM DROPDOWNS N FUNCTIONS*/
-function showSubSelection(selectedValue) {
-  const subSelectionContainer = document.getElementById(
-    "sub-selection-container"
-  );
-  subSelectionContainer.innerHTML = "";
-
-  if (selectedValue === "Furniture") {
-    const furnitureOptions = [
-      { value: "Chair", text: "Chair" },
-      { value: "Sofa", text: "Sofa" },
-      { value: "Bed", text: "Bed" },
-    ];
-
-    const subSelect = document.createElement("select");
-    subSelect.className = "formbold-form-input";
-    subSelect.name = "furniture-sub-selection";
-    subSelect.id = "furniture-sub-selection";
-
-    furnitureOptions.forEach((option) => {
-      const opt = document.createElement("option");
-      opt.value = option.value;
-      opt.text = option.text;
-      subSelect.appendChild(opt);
-    });
-
-    subSelectionContainer.appendChild(subSelect);
-  } else if (selectedValue === "Beauty") {
-    const beautyOptions = [
-      { value: "Makeup", text: "Makeup" },
-      { value: "Cosmetic", text: "Cosmetic" },
-      { value: "Products", text: "Products" },
-    ];
-
-    const subSelect = document.createElement("select");
-    subSelect.className = "formbold-form-input";
-    subSelect.name = "beauty-sub-selection";
-    subSelect.id = "beauty-sub-selection";
-
-    beautyOptions.forEach((option) => {
-      const opt = document.createElement("option");
-      opt.value = option.value;
-      opt.text = option.text;
-      subSelect.appendChild(opt);
-    });
-
-    subSelectionContainer.appendChild(subSelect);
-  }
-}
-
-function changeOperationType() {
-  var occupation = document.getElementById("occupation").value;
-  var operationSelect = document.getElementById("operation-select");
-  var noOfStoresSelect = document.getElementById("no-of-stores-select");
-  var operationTypeDiv = document.getElementById("operation-type");
-  var noOfStoresDiv = document.getElementById("no-of-stores");
-
-  operationSelect.innerHTML = "";
-  noOfStoresSelect.innerHTML =
-    "<option value=''>Select</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option><option value='10'>10+</option>";
-
-  if (occupation === "Online") {
-    operationTypeDiv.style.display = "block";
-    noOfStoresDiv.style.display = "none";
-    operationSelect.innerHTML =
-      "<option value=''>Select</option><option value='App'>App</option><option value='Website'>Website</option><option value='Others'>Others</option>";
-  } else if (occupation === "Local") {
-    operationTypeDiv.style.display = "none";
-    noOfStoresDiv.style.display = "block";
-  } else if (occupation === "Hybrid") {
-    operationTypeDiv.style.display = "block";
-    noOfStoresDiv.style.display = "block";
-    operationSelect.innerHTML =
-      "<option value=''>Select</option><option value='App'>App</option><option value='Website'>Website</option><option value='Others'>Others</option>";
-
-    // Add options for Others
-    if (operationSelect.value === "Others") {
-      var othersOptions = [
-        { value: "Whatsapp", text: "Whatsapp" },
-        { value: "Facebook", text: "Facebook" },
-        { value: "Instagram", text: "Instagram" },
-      ];
-
-      othersOptions.forEach((option) => {
-        const opt = document.createElement("option");
-        opt.value = option.value;
-        opt.text = option.text;
-        operationSelect.appendChild(opt);
-      });
-    }
-  }
-}
