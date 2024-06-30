@@ -3,53 +3,149 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DiMark AI - Features</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #f0f2f5;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        background-color: white;
+        border-radius: 10px;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+      }
+      .user-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .user-info img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .user-info .user-name {
+        font-weight: bold;
+      }
+      .user-info .user-handle {
+        color: #888;
+      }
+      .post-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .post-content {
+        margin-bottom: 20px;
+      }
+      .image-container {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      .image-container img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .action-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .action-buttons button {
+        background-color: #fff;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .action-buttons button:hover {
+        background-color: #f2f2f2;
+      }
+      .action-buttons button i {
+        margin-right: 5px;
+      }
+      .comments-section {
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+      }
+      .comments-section h3 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .comments-section .comment {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .comments-section .comment img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .comments-section .comment-text {
+        font-size: 14px;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="testimonials.html">Features</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="middle-column">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            <i class="fas fa-lock"></i>
-            <h3>Secure Data</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </li>
-          <li>
-            <i class="fas fa-rocket"></i>
-            <h3>Fast Processing</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </li>
-          <li>
-            <i class="fas fa-chart-bar"></i>
-            <h3>Data Analytics</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </li>
-          <li>
-            <i class="fas fa-cog"></i>
-            <h3>Customizable</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </li>
-          <li>
-            <i class="fas fa-user"></i>
-            <h3>User-Friendly</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </li>
-        </ul>
-      </section>
-    </main>
-    <script src="script.js"></script>
+    <div class="container">
+      <div class="user-info">
+        <img src="https://i.imgur.com/3Z4Z7jQ.png" alt="User Profile Picture" />
+        <div>
+          <div class="user-name">DiMark-AI</div>
+          <div class="user-handle">Sponsored</div>
+        </div>
+      </div>
+      <div class="post-title">[UX Design] - Set the default Library tab</div>
+      <div class="post-content">
+        🪑🏡 Elevate Your Space with our furniture store! 🏡🪑 Transform your
+        home into a sanctuary of style and comfort with our exquisite range of
+        furniture!
+      </div>
+      <div class="image-container">
+        <img src="https://i.imgur.com/QkU9L30.png" alt="Post Image" />
+      </div>
+      <div class="action-buttons">
+        <button><i class="fa fa-heart"></i> 28.5k Likes</button>
+        <button><i class="fa fa-comment"></i> 34 Comments</button>
+        <button><i class="fa fa-share"></i> 156 Shares</button>
+        <button><i class="fa fa-save"></i> 20 Saves</button>
+      </div>
+      <div class="comments-section">
+        <h3>Comments</h3>
+        <div class="comment">
+          <img
+            src="https://i.imgur.com/z51829b.png"
+            alt="Commenter Profile Picture"
+          />
+          <div class="comment-text">
+            This is a great idea! I would love to see this feature implemented.
+          </div>
+        </div>
+        <div class="comment">
+          <img
+            src="https://i.imgur.com/z51829b.png"
+            alt="Commenter Profile Picture"
+          />
+          <div class="comment-text">
+            I agree, it would be so helpful for navigating between tabs.
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
