@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advertise in Seconds</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 500px;
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+      }
+
+      .checkbox-group label {
+        margin-left: 10px;
+      }
+
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+        appearance: none;
+      }
+
+      button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      button:hover {
+        background-color: #0062cc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Advertise in Seconds</h1>
+      <h2>Step 1: Start a new Ad</h2>
+
+      <form>
+        <div class="form-group">
+          <label for="website">Website (Optional)</label>
+          <input type="text" id="website" placeholder="Eg. www.dimark-ai.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="business-name">Business Name*</label>
+          <input type="text" id="business-name" placeholder="Eg. DiMark AI" />
+        </div>
+
+        <div class="form-group">
+          <label for="industry">Business Industry</label>
+          <select id="industry">
+            <option value="Furniture">Furniture</option>
+            <option value="Food">Food</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="business-type">Business Type</label>
+          <select id="business-type">
+            <option value="Online">Online</option>
+            <option value="Local">Local</option>
+            <option value="Hybrid">Hybrid</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>How do you operate online?</label>
+          <div class="checkbox-group">
+            <input type="checkbox" id="app" name="operation" />
+            <label for="app">App</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="website" name="operation" />
+            <label for="website">Website</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="others" name="operation" />
+            <label for="others">Others</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="whatsapp" name="operation" />
+            <label for="whatsapp">WhatsApp</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>How do you operate Local or Physical Store?</label>
+          <div class="form-group">
+            <label for="stores">No. of Stores*</label>
+            <select id="stores">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="10+">10+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label
+            >Do you want to show your website/whatsapp in ads
+            description?</label
+          >
+          <div class="checkbox-group">
+            <input type="checkbox" id="yes" name="show-contact" />
+            <label for="yes">Yes</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="no" name="show-contact" />
+            <label for="no">No</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="offer">Add your offer*</label>
+          <textarea
+            id="offer"
+            placeholder="10% off on all products, 20% Summer Sale, Buy 1 Get 1 Free, etc."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="features">Features of your Products or Services</label>
+          <textarea
+            id="features"
+            placeholder="2 Years Warranty, 30 days refund, Free Installation, Free delivery, etc."
+          ></textarea>
+        </div>
+
+        <button type="submit">Start Generating</button>
+      </form>
+    </div>
+  </body>
+</html>

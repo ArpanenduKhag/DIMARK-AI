@@ -343,7 +343,7 @@
           />
         </svg>
 
-        <form action="https://formbold.com/s/FORM_ID" method="POST">
+        <form>
           <div class="formbold-input-flex">
             <div>
               <label for="firstname" class="formbold-form-label">
@@ -467,7 +467,13 @@
             ></textarea>
           </div>
 
-          <button class="formbold-btn">Start Generating</button>
+          <button
+            type="button"
+            class="formbold-btn"
+            onclick="handleFormSubmit()"
+          >
+            Start Generating
+          </button>
         </form>
       </div>
     </div>
@@ -668,6 +674,7 @@
     </style>
 
     <script>
+      /*
       function showSubSelection(selectedValue) {
         const subSelectionContainer = document.getElementById(
           "sub-selection-container"
@@ -716,6 +723,7 @@
           subSelectionContainer.appendChild(subSelect);
         }
       }
+      */
 
       function changeOperationType() {
         var occupation = document.getElementById("occupation").value;
@@ -741,22 +749,6 @@
           noOfStoresDiv.style.display = "block";
           operationSelect.innerHTML =
             "<option value=''>Select</option><option value='App'>App</option><option value='Website'>Website</option><option value='Whatsapp'>Whatsapp</option>";
-
-          // Add options for Others
-          if (operationSelect.value === "Others") {
-            var othersOptions = [
-              { value: "Whatsapp", text: "Whatsapp" },
-              { value: "Facebook", text: "Facebook" },
-              { value: "Instagram", text: "Instagram" },
-            ];
-
-            othersOptions.forEach((option) => {
-              const opt = document.createElement("option");
-              opt.value = option.value;
-              opt.text = option.text;
-              operationSelect.appendChild(opt);
-            });
-          }
         }
       }
 
@@ -804,6 +796,16 @@
           event.target.parentNode.remove();
         }
       });
+
+      function handleFormSubmit() {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // Perform your form validation or processing here if needed
+
+        // Redirect to preview.html
+        window.location.href = "preview.html";
+      }
     </script>
   </body>
 </html>
