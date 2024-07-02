@@ -3,153 +3,182 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DiMark-AI Preview</title>
-    <style>
-      body {
-        background-color: #f0f2f5;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .container {
-        background-color: white;
-        border-radius: 10px;
-        margin: 20px auto;
-        padding: 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        max-width: 500px;
-      }
-      .user-info {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-      }
-      .user-info img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin-right: 10px;
-      }
-      .user-info .user-name {
-        font-weight: bold;
-      }
-      .user-info .user-handle {
-        font-size: 12px;
-        color: #888;
-      }
-      .post-title {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-      .post-content {
-        margin-bottom: 20px;
-      }
-      .image-container {
-        position: relative;
-        width: 100%;
-        height: 250px;
-        overflow: hidden;
-        border-radius: 10px;
-      }
-      .image-container img {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-      .action-buttons {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 10px;
-      }
-      .action-buttons button {
-        background-color: #fff;
-        border: none;
-        padding: 8px 12px;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      .action-buttons button:hover {
-        background-color: #f2f2f2;
-      }
-      .action-buttons button i {
-        font-size: 16px;
-        margin-right: 5px;
-      }
-      .action-buttons button img {
-        width: 16px;
-        height: 16px;
-        margin-right: 5px;
-        margin-top: 5px;
-      }
-      .comments-section {
-        border-top: 1px solid #eee;
-        padding-top: 10px;
-      }
-      .comments-section h3 {
-        font-size: 16px;
-        font-weight: bold;
-        margin-bottom: 5px;
-      }
-      .comments-section .comment {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-      }
-      .comments-section .comment img {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        margin-right: 10px;
-      }
-      .comments-section .comment-text {
-        font-size: 14px;
-      }
-    </style>
+    <title>DiMark-AI Preview1</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap"
+    />
   </head>
   <body>
-    <div class="container">
-      <div class="user-info">
-        <img src="Frame 244.png" alt="User Profile Picture" />
-        <div>
-          <div class="user-name">DiMark-AI</div>
-          <div class="user-handle">Sponsored</div>
+    <section class="sidebar">
+      <div class="nav-header">
+        <a href="#" class="logo">
+          <img
+            src="DiMark AI1.png"
+            alt="DiMark AI logo"
+            width="120"
+            height="20"
+          />
+        </a>
+        <i class="bx bx-menu btn-menu"></i>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <i class="bx bx-search search-btn"></i>
+          <input type="text" placeholder="search..." />
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-home-alt-2"></i>
+            <span class="title">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-news"></i>
+            <span class="title">Advertise</span>
+          </a>
+          <span class="tooltip">Advertise</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-magic-wand"></i>
+            <span class="title">Creative Hub</span>
+          </a>
+          <span class="tooltip">Creative Hub</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-analyse"></i>
+            <span class="title">Analytics</span>
+          </a>
+          <span class="tooltip">Analytics</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-devices"></i>
+            <span class="title">Connect Platforms</span>
+          </a>
+          <span class="tooltip">Connect Platforms</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="title">Setting</span>
+          </a>
+          <span class="tooltip">Setting</span>
+        </li>
+      </ul>
+      <div class="theme-wrapper">
+        <i class="bx bxs-moon theme-icon"></i>
+        <p>Dark Theme</p>
+        <div class="theme-btn">
+          <span class="theme-ball"></span>
         </div>
       </div>
-      <div class="post-title">10% off on all furnitures with DiMark AI</div>
-      <div class="post-content">
-        <p>🪑🏡 Elevate Your Space with our furniture store! 🏡🪑</p>
-        <p>
-          Transform your home into a sanctuary of style and comfort with our
-          exquisite range of furniture!...See More
-        </p>
-      </div>
-      <div class="image-container">
-        <img src="DiMark AI POST.png" alt="Post Image" />
-      </div>
-      <div class="action-buttons">
-        <button><img src="like.png" alt="Like" /> 28.5k Likes</button>
-        <button><img src="comment.png" alt="Comment" /> 34 Comments</button>
-        <button><img src="share.png" alt="Share" /> 156 Shares</button>
-        <button><img src="save.png" alt="Save" /> 20 Saves</button>
-      </div>
-      <div class="comments-section">
-        <h3>Comments</h3>
-        <div class="comment">
-          <img src="Person Photo 14.png" alt="Commenter Profile Picture" />
-          <div class="comment-text">
-            This is a great idea! I would love to see this feature implemented.
+    </section>
+    <section class="home">
+      <div class="container">
+        <div class="user-info">
+          <img src="Frame 244.png" alt="User Profile Picture" />
+          <div>
+            <div class="user-name">DiMark-AI</div>
+            <div class="user-handle">Sponsored</div>
           </div>
         </div>
-        <div class="comment">
-          <img src="Person Photo 14.png" alt="Commenter Profile Picture" />
-          <div class="comment-text">
-            I agree, it would be so helpful for navigating between tabs.
+        <div class="post-title">10% off on all furnitures with DiMark AI</div>
+        <div class="post-content">
+          🪑🏡 Elevate Your Space with our furniture store! 🏡🪑 Transform your
+          home into a sanctuary of style and comfort with our exquisite range of
+          furniture!...See More
+        </div>
+        <div class="image-container">
+          <img src="DiMark AI POST.png" alt="Post Image" />
+        </div>
+        <div class="action-buttons">
+          <button>
+            <i class="bx bx-heart"> 28.5k Likes</i>
+          </button>
+          <button>
+            <i class="bx bx-comment-dots" alt="Comment"> 34 Comments</i>
+          </button>
+          <button>
+            <i class="bx bxs-share-alt"> 156 Shares</i>
+          </button>
+          <button>
+            <i class="bx bx-bookmark"> 20 Saves</i>
+          </button>
+        </div>
+        <div class="comments-section">
+          <h3>Comments</h3>
+          <div class="comment">
+            <img src="Person Photo 14.png" alt="Commenter Profile Picture" />
+            <div class="comment-text">
+              This is a great idea! I would love to see this feature
+              implemented.
+            </div>
+          </div>
+          <div class="comment">
+            <img src="Person Photo 14.png" alt="Commenter Profile Picture" />
+            <div class="comment-text">
+              I agree, it would be so helpful for navigating between tabs.
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <script>
+      /*NAVBAR*/
+      const btn_menu = document.querySelector(".btn-menu");
+      const side_bar = document.querySelector(".sidebar");
+
+      btn_menu.addEventListener("click", function () {
+        side_bar.classList.toggle("expand");
+        changebtn();
+      });
+
+      function changebtn() {
+        if (side_bar.classList.contains("expand")) {
+          btn_menu.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else {
+          btn_menu.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+      }
+
+      const btn_theme = document.querySelector(".theme-btn");
+      const theme_ball = document.querySelector(".theme-ball");
+
+      const localData = localStorage.getItem("theme");
+
+      if (localData == null) {
+        localStorage.setItem("theme", "light");
+      }
+
+      if (localData == "dark") {
+        document.body.classList.add("dark-mode");
+        theme_ball.classList.add("dark");
+      } else if (localData == "light") {
+        document.body.classList.remove("dark-mode");
+        theme_ball.classList.remove("dark");
+      }
+
+      btn_theme.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+        theme_ball.classList.toggle("dark");
+        if (document.body.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
+        }
+      });
+    </script>
   </body>
 </html>
