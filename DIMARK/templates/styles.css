@@ -726,7 +726,11 @@ select.formbold-form-input,
 /*PREVIEW CSS*/
 
 .container {
-  background-color: white;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  background: var(--color-white);
+  color: var(--color-black);
   border-radius: 10px;
   margin: 20px auto;
   padding: 20px;
