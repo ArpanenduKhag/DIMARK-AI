@@ -728,8 +728,7 @@ select.formbold-form-input,
 .container {
   align-items: center;
   justify-content: center;
-  background: var(--color-white);
-  color: var(--color-black);
+  background: white;
   border-radius: 10px;
   margin: 20px auto;
   padding: 20px;
@@ -785,15 +784,14 @@ select.formbold-form-input,
   margin-bottom: 10px;
 }
 .action-buttons button {
-  background: var(--color-white);
-  color: var(--color-black);
+  background: white;
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
   cursor: pointer;
 }
 .action-buttons button:hover {
-  background: var(--color-bg);
+  background: rgb(154, 154, 154);
 }
 .action-buttons button i {
   font-size: 16px;
