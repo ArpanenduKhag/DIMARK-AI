@@ -46,9 +46,11 @@
 }
 
 .nav-header .logo {
-  color: var(--color-black);
-  font-size: 23px;
-  font-weight: 600;
+  position: fixed;
+  top: 4%;
+  left: 3;
+  height: 60px;
+  width: 50%;
   opacity: 0;
   transition: var(--transition);
 }
@@ -722,15 +724,7 @@ select.formbold-form-input,
 }
 
 /*PREVIEW CSS*/
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f0f2f5;
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 .container {
   background-color: white;
   border-radius: 10px;
