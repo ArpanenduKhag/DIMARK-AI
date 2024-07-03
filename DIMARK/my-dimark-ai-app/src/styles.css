@@ -562,20 +562,6 @@ body {
 .formbold-img {
   display: block;
   margin: 0 auto 45px;
-  max-width: 100%; /* add this to ensure the image doesn't exceed its parent's width */
-}
-
-/* add media queries to adjust the margin bottom for different screen sizes */
-@media (max-width: 768px) {
-  .formbold-img {
-    margin-bottom: 30px; /* adjust the margin bottom for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .formbold-img {
-    margin-bottom: 20px; /* adjust the margin bottom for even smaller screens */
-  }
 }
 
 .formbold-input-wrapp > div {
@@ -735,45 +721,6 @@ select.formbold-form-input,
   color: #999;
   cursor: pointer;
   margin-left: 5px;
-}
-
-/* Media queries for .tags-input */
-@media (max-width: 768px) {
-  .tags-input {
-    padding: 10px 15px; /* adjust padding for smaller screens */
-  }
-  .tags-input li {
-    padding: 3px 8px; /* adjust padding for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .tags-input {
-    padding: 8px 12px; /* adjust padding for even smaller screens */
-  }
-  .tags-input li {
-    padding: 2px 6px; /* adjust padding for even smaller screens */
-  }
-}
-
-/* Make .formbold-img responsive */
-.formbold-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%; /* add this to ensure the image doesn't exceed its parent's width */
-}
-
-/* Media queries for .formbold-img */
-@media (max-width: 768px) {
-  .formbold-img {
-    margin-bottom: 30px; /* adjust margin bottom for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .formbold-img {
-    margin-bottom: 20px; /* adjust margin bottom for even smaller screens */
-  }
 }
 
 /*PREVIEW CSS*/
