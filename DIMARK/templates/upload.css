@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-.drag-area {
+.drag-area1,
+.drag-area2 {
   width: 100%;
   padding: 13px 22px;
   border-radius: 5px;
@@ -14,25 +15,31 @@
   justify-content: center;
   flex-direction: column;
 }
-.drag-area.active {
+.drag-area1.active,
+.drag-area2.active {
   border: 2px solid #1a1818;
 }
-.drag-area .icon {
+.drag-area1.icon,
+.drag-area2.icon {
   font-size: 20px;
   color: rgba(83, 99, 135, 0.5);
 }
-.drag-area header {
+.drag-area1 header,
+.drag-area2 header {
   font-size: 14px;
   font-weight: 500;
   color: rgba(83, 99, 135, 0.5);
 }
-.drag-area span {
+.drag-area1 span,
+.drag-area2 span {
   font-size: 14px;
   font-weight: 500;
   color: rgba(83, 99, 135, 0.5);
   margin: 10px 0 15px 0;
 }
-.drag-area button {
+
+.drag-area1 button,
+.drag-area2 button {
   padding: 5px 12px;
   font-size: 12px;
   font-weight: 500;
@@ -43,7 +50,9 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.drag-area img {
+
+.drag-area1 img,
+.drag-area2 img {
   height: 100%;
   width: 100%;
   object-fit: cover;
