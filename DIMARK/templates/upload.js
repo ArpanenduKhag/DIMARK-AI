@@ -1,3 +1,4 @@
+/*UPLOAD*/
 // selecting all required elements
 const dropArea1 = document.querySelector(".drag-area1"),
   dragText1 = dropArea1.querySelector("header"),
