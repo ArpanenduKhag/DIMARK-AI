@@ -19,9 +19,9 @@
 .drag-area2.active {
   border: 2px solid #1a1818;
 }
-.drag-area1.icon,
-.drag-area2.icon {
-  font-size: 20px;
+.drag-area1 i,
+.drag-area2 i {
+  font-size: 25px;
   color: rgba(83, 99, 135, 0.5);
 }
 .drag-area1 header,
