@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DiMark AI - Creative Tab</title>
+    <link rel="stylesheet" href="upload.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="sidebar">
+      <div class="nav-header">
+        <a href="#" class="logo">
+          <img
+            src="icons/DiMark AI1.png "
+            alt="DiMark AI logo"
+            width="120"
+            height="20"
+          />
+        </a>
+        <i class="bx bx-menu btn-menu"></i>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <i class="bx bx-search search-btn"></i>
+          <input type="text" placeholder="search..." />
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-home-alt-2"></i>
+            <span class="title">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-group"></i>
+            <span class="title">Client Tab</span>
+          </a>
+          <span class="tooltip">Client Tab</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-news"></i>
+            <span class="title">Advertise</span>
+          </a>
+          <span class="tooltip">Advertise</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-magic-wand"></i>
+            <span class="title">Creative Hub</span>
+          </a>
+          <span class="tooltip">Creative Hub</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-analyse"></i>
+            <span class="title">Analytics</span>
+          </a>
+          <span class="tooltip">Analytics</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-devices"></i>
+            <span class="title">Connect Platforms</span>
+          </a>
+          <span class="tooltip">Connect Platforms</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="title">Setting</span>
+          </a>
+          <span class="tooltip">Setting</span>
+        </li>
+      </ul>
+      <div class="theme-wrapper">
+        <i class="bx bxs-moon theme-icon"></i>
+        <p>Dark Theme</p>
+        <div class="theme-btn">
+          <span class="theme-ball"></span>
+        </div>
+      </div>
+    </section>
+    <section class="home">
+      <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+          <form>
+            <div class="formbold-input-flex">
+              <div>
+                <label for="firstname" class="formbold-form-label">
+                  Website (Optional)
+                </label>
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  placeholder="Eg: www.dimark-ai.com"
+                  class="formbold-form-input"
+                />
+              </div>
+
+              <div>
+                <label for="lastname" class="formbold-form-label">
+                  Business Name
+                </label>
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  placeholder="Eg: DiMark AI"
+                  class="formbold-form-input"
+                />
+              </div>
+            </div>
+
+            ]
+
+            <div class="formbold-mb-3">
+              <label for="address" class="formbold-form-label">
+                What Products do you sell?
+              </label>
+
+              <div class="drag-area">
+                <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                <header>Drag & Drop to Upload File</header>
+                <span>OR</span>
+                <button>Browse File</button>
+                <input type="file" hidden />
+              </div>
+            </div>
+
+            <div class="formbold-mb-3">
+              <label for="address" class="formbold-form-label">
+                Do you want to show your website/whatsapp in your ads
+                description?
+              </label>
+              <select class="formbold-form-input" id="no-of-stores-select">
+                <option value="">Select</option>
+                <option value="">Yes</option>
+                <option value="">No</option>
+              </select>
+            </div>
+
+            <div class="formbold-mb-3">
+              <label for="address" class="formbold-form-label">
+                Budget (in INR) per day
+              </label>
+              <select class="formbold-form-input" id="no-of-stores-select">
+                <option value="">Select</option>
+                <option value="">100-150/day</option>
+                <option value="">150-200/day</option>
+              </select>
+            </div>
+
+            <div class="formbold-mb-3">
+              <label for="address" class="formbold-form-label">
+                Add Your Offer
+              </label>
+
+              <input
+                type="text"
+                name="address"
+                id="address"
+                placeholder="10% off on all products, 20% Summer Sale, Buy 1 Get 1 Free, etc."
+                class="formbold-form-input formbold-mb-3"
+              />
+            </div>
+
+            <div class="formbold-mb-3">
+              <label for="message" class="formbold-form-label"
+                >Features of your Products or Services
+              </label>
+              <textarea
+                rows="6"
+                name="message"
+                id="message"
+                class="formbold-form-input"
+                placeholder="2 Years Warranty, 30 days refund, Free Installation, Free Delivery, etc."
+              ></textarea>
+            </div>
+
+            <button
+              type="button"
+              class="formbold-btn"
+              onclick="handleFormSubmit()"
+            >
+              Start Generating
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
