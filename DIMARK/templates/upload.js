@@ -150,3 +150,14 @@ btn_theme.addEventListener("click", function () {
     localStorage.setItem("theme", "light");
   }
 });
+
+/*button*/
+function handleFormSubmit() {
+  // Prevent the default form submission
+  event.preventDefault();
+
+  // Perform your form validation or processing here if needed
+
+  // Redirect to preview.html
+  window.location.href = "preview1.html";
+}
