@@ -169,6 +169,37 @@ function handleFormSubmit() {
   event.preventDefault();
 
   // Perform your form validation or processing here if needed
+  const formData = {
+    website: document.getElementById("firstname").value,
+    businessName: document.getElementById("lastname").value,
+    businessType: document.getElementById("occupation").value,
+    operationType: document.getElementById("operation-select").value,
+    noOfStores: document.getElementById("no-of-stores-select").value,
+    products: Array.from(document.getElementById("tags").children).map(
+      (tag) => tag.textContent
+    ),
+    showWebsiteInAds: document.getElementById("no-of-stores-select").value,
+    budget: document.getElementById("no-of-stores-select").value,
+    objective: document.getElementById("no-of-stores-select").value,
+    offer: document.getElementById("address").value,
+    features: document.getElementById("message").value,
+  };
+
+  const jsonString = JSON.stringify(formData, null, 2);
+
+  // Create a blob with the JSON data
+  const blob = new Blob([jsonString], { type: "application/json" });
+
+  // Create a link to download the JSON file
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "form_data.json";
+  a.click();
+
+  // Remove the link and blob
+  URL.revokeObjectURL(url);
+  a.remove();
 
   // Redirect to preview.html
   window.location.href = "preview1.html";

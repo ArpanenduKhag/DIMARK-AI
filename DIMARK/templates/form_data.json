@@ -1,0 +1,18 @@
+{
+  "website": "www.dimark-ai.com",
+  "businessName": "DiMark AI",
+  "businessType": "Hybrid",
+  "operationType": "Website",
+  "noOfStores": "5",
+  "products": [
+    "ChairX",
+    "FurnitureX",
+    "bedX",
+    "sofaX"
+  ],
+  "showWebsiteInAds": "5",
+  "budget": "5",
+  "objective": "5",
+  "offer": "10% on all the products",
+  "features": "30 days full refund              "
+}
